@@ -1,0 +1,15 @@
+{
+    "name": "drupal/dupman_agent",
+    "type": "drupal-module",
+    "description": "Integration layer between Drupal and dupman service.",
+    "keywords": [
+        "Drupal"
+    ],
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://www.drupal.org/project/dupman_agent",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/dupman_agent",
+        "source": "https://cgit.drupalcode.org/dupman_agent"
+    }
+}

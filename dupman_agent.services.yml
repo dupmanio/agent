@@ -1,0 +1,4 @@
+services:
+  dupman:
+    class: Drupal\dupman_agent\Dupman
+    arguments: ['@state']

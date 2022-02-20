@@ -1,0 +1,20 @@
+dupman_agent.settings:
+  path: '/admin/config/services/dupman_agent'
+  defaults:
+    _form: '\Drupal\dupman_agent\Form\AdminForm'
+    _title: 'Dupman Agent Configuration'
+  requirements:
+    _permission: 'administer dupman_agent'
+
+dupman_agent.status:
+  path: '/dupman/status'
+  defaults:
+    _controller: '\Drupal\dupman_agent\Controller\DupmanController::status'
+    _title: 'Site Status'
+  methods: [ GET ]
+  requirements:
+    _permission: 'access content'
+    _format: json
+    _content_type_format: json
+  options:
+    no_cache: TRUE

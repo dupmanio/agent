@@ -1,0 +1,35 @@
+<?php
+
+/*
+ * This file is part of the dupman/agent project.
+ *
+ * (c) 2022. dupman <info@dupman.cloud>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * Written by Temuri Takalandze <me@abgeo.dev>, February 2022
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dupman_agent_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.dupman_agent') {
+    $text = file_get_contents(__DIR__ . '/README.md');
+    return '<pre>' . Html::escape($text) . '</pre>';
+  }
+
+  return NULL;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dupman_agent_form_dupman_agent_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  unset($form['actions']);
+}

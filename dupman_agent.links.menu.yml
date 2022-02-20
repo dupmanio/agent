@@ -1,0 +1,5 @@
+dupman_agent.settings:
+  title: 'Dupman Agent Configuration'
+  route_name: dupman_agent.settings
+  description: 'Configure the Dupman Agent module.'
+  parent: system.admin_config_services
